@@ -7,45 +7,60 @@ import {
   GitLab, Git, Figma, NodeJs, Hashnode, ExpressJsDark, MongoDB, Jira,
   VisualStudioCode, Appwrite, TailwindCSS, Bootstrap5, ReactQuery, Redux,
   MaterialUI, Linux, Notion, GraphQL,
-  Postman
+  Postman, GitHubDark, ExpressJsLight
 } from "developer-icons";
+import { useTheme } from 'next-themes';
 
-const skills = [
-  { name: "HTML5", icon: <HTML5 size={30} />, color: "orange", category: "Frontend" },
-  { name: "CSS3", icon: <CSS3 size={30} />, color: "blue", category: "Frontend" },
-  { name: "JavaScript", icon: <JavaScript size={30} />, color: "yellow", category: "Frontend" },
-  { name: "React", icon: <ReactIcon size={30} />, color: "cyan", category: "Frontend" },
-  { name: "Next.js", icon: <NextJs size={30} />, color: "slate", category: "Frontend" },
-  { name: "TypeScript", icon: <TypeScript size={30} />, color: "blue", category: "Frontend" },
-  { name: "GitHub", icon: <GitHubLight size={30} />, color: "slate", category: "Tools" },
-  { name: "GitLab", icon: <GitLab size={30} />, color: "orange", category: "Tools" },
-  { name: "Git", icon: <Git size={30} />, color: "red", category: "Tools" },
-  { name: "Figma", icon: <Figma size={30} />, color: "purple", category: "Design" },
-  { name: "Node.js", icon: <NodeJs size={30} />, color: "green", category: "Backend" },
-  { name: "Hashnode", icon: <Hashnode size={30} />, color: "blue", category: "Tools" },
-  { name: "Express.js", icon: <ExpressJsDark size={30} />, color: "slate", category: "Backend" },
-  { name: "MongoDB", icon: <MongoDB size={30} />, color: "green", category: "Backend" },
-  { name: "Jira", icon: <Jira size={30} />, color: "blue", category: "Tools" },
-  { name: "VS Code", icon: <VisualStudioCode size={30} />, color: "blue", category: "Tools" },
-  { name: "Appwrite", icon: <Appwrite size={30} />, color: "pink", category: "Backend" },
-  { name: "Tailwind CSS", icon: <TailwindCSS size={30} />, color: "cyan", category: "Design" },
-  { name: "Bootstrap 5", icon: <Bootstrap5 size={30} />, color: "purple", category: "Design" },
-  { name: "React Query", icon: <ReactQuery size={30} />, color: "red", category: "Frontend" },
-  { name: "Redux", icon: <Redux size={30} />, color: "purple", category: "Frontend" },
-  { name: "Material UI", icon: <MaterialUI size={30} />, color: "blue", category: "Design" },
-  { name: "Linux", icon: <Linux size={30} />, color: "yellow", category: "Tools" },
-  { name: "Notion", icon: <Notion size={30} />, color: "slate", category: "Tools" },
-  { name: "GraphQL", icon: <GraphQL size={30} />, color: "pink", category: "Frontend" },
-  { name: "Postman", icon: <Postman size={30} />, color: "orange", category: "Tools" },
-  // { name: "REST API", icon: <Rest size={30} />, color: "green", category: "Backend" },
-  // { name: "Zustand", icon: <Zustand size={30} />, color: "blue", category: "Frontend" },
-];
+
 const categories = ["All", "Frontend", "Backend", "Tools", "Design"];
 
 export default function Skills() {
+
+  const { theme } = useTheme()
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredSkills = skills.filter(skill => 
+  console.log(theme, "++66")
+
+  const skills = [
+    { name: "HTML5", icon: <HTML5 size={30} />, color: "orange", category: "Frontend" },
+    { name: "CSS3", icon: <CSS3 size={30} />, color: "blue", category: "Frontend" },
+    { name: "JavaScript", icon: <JavaScript size={30} />, color: "yellow", category: "Frontend" },
+    { name: "React", icon: <ReactIcon size={30} />, color: "cyan", category: "Frontend" },
+    { name: "Next.js", icon: <NextJs size={30} />, color: "slate", category: "Frontend" },
+    { name: "TypeScript", icon: <TypeScript size={30} />, color: "blue", category: "Frontend" },
+    {
+      name: "GitHub",
+      icon: theme === "dark" ? <GitHubLight size={30} /> : <GitHubDark size={30} />,
+      color: "slate",
+      category: "Tools"
+    },
+    {
+      name: "Express JS",
+      icon: theme === "dark" ? <ExpressJsLight size={30} /> : <ExpressJsDark size={30} />,
+      color: "slate", 
+      category: "Backend"
+    },
+    { name: "GitLab", icon: <GitLab size={30} />, color: "orange", category: "Tools" },
+    { name: "Git", icon: <Git size={30} />, color: "red", category: "Tools" },
+    { name: "Figma", icon: <Figma size={30} />, color: "purple", category: "Design" },
+    { name: "Node.js", icon: <NodeJs size={30} />, color: "green", category: "Backend" },
+    { name: "Hashnode", icon: <Hashnode size={30} />, color: "blue", category: "Tools" },
+    { name: "MongoDB", icon: <MongoDB size={30} />, color: "green", category: "Backend" },
+    { name: "Jira", icon: <Jira size={30} />, color: "blue", category: "Tools" },
+    { name: "VS Code", icon: <VisualStudioCode size={30} />, color: "blue", category: "Tools" },
+    { name: "Appwrite", icon: <Appwrite size={30} />, color: "pink", category: "Backend" },
+    { name: "Tailwind CSS", icon: <TailwindCSS size={30} />, color: "cyan", category: "Design" },
+    { name: "Bootstrap 5", icon: <Bootstrap5 size={30} />, color: "purple", category: "Design" },
+    { name: "React Query", icon: <ReactQuery size={30} />, color: "red", category: "Frontend" },
+    { name: "Redux", icon: <Redux size={30} />, color: "purple", category: "Frontend" },
+    { name: "Material UI", icon: <MaterialUI size={30} />, color: "blue", category: "Design" },
+    { name: "Linux", icon: <Linux size={30} />, color: "yellow", category: "Tools" },
+    { name: "Notion", icon: <Notion size={30} />, color: "slate", category: "Tools" },
+    { name: "GraphQL", icon: <GraphQL size={30} />, color: "pink", category: "Frontend" },
+    { name: "Postman", icon: <Postman size={30} />, color: "orange", category: "Tools" },
+  ];
+
+  const filteredSkills = skills.filter(skill =>
     selectedCategory === "All" ? true : skill.category === selectedCategory
   );
 
@@ -74,7 +89,7 @@ export default function Skills() {
         >
           Expertise in modern web technologies and tools
         </motion.p>
-        
+
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 mt-6">
           {categories.map((category) => (
@@ -105,10 +120,10 @@ export default function Skills() {
               transition={{ duration: 0.3 }}
               whileHover={{
                 scale: 1.02,
-                transition: { 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 10 
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10
                 }
               }}
               whileTap={{ scale: 0.98 }}
@@ -117,7 +132,7 @@ export default function Skills() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent group-hover:via-primary/10 transition-all duration-500 translate-x-[-100%] group-hover:translate-x-[100%]" />
                 <CardHeader className="p-4">
                   <div className="flex items-center gap-4">
-                    <motion.div 
+                    <motion.div
                       className={`w-12 h-12 rounded-xl bg-${skill.color}-50 dark:bg-${skill.color}-500/10 
                         flex items-center justify-center relative`}
                       whileHover={{
@@ -125,7 +140,7 @@ export default function Skills() {
                         transition: { duration: 0.8, ease: "easeInOut" }
                       }}
                     >
-                      <motion.span 
+                      <motion.span
                         className={`text-${skill.color}-500 dark:text-${skill.color}-400`}
                         whileHover={{ scale: 1.2 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -134,7 +149,7 @@ export default function Skills() {
                       </motion.span>
                     </motion.div>
                     <div className="flex-1">
-                      <motion.h3 
+                      <motion.h3
                         className="text-sm font-medium mb-1"
                       >
                         {skill.name}

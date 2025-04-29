@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Mail, MessageSquare, User } from "lucide-react"
+import { Mail, MapPin, MessageSquare, Phone, User } from "lucide-react"
 import { WaveBackground } from "./WaveBackground"
 import { toast } from "sonner"
 
@@ -43,51 +43,68 @@ export default function Contact({
   }
 
   return (
-    <section id="contact" className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-      <div className="container relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{heading}</h2>
-          <p className="text-muted-foreground mt-2 text-base md:text-lg">{description}</p>
+    <section id="contact" className="relative pb-20 overflow-hidden">
+
+     <div className="relative z-10 w-[90%] md:max-w-6xl mx-auto grid md:grid-cols-2 gap-8 rounded-2xl 
+     shadow-lg backdrop-blur-lg border bg-white dark:bg-black md:bg-transparent">
+        {/* Contact Info */}
+        <div className="bg-slate-900 text-white p-8 pb-4 flex flex-col justify-between rounded-l-2xl">
+          <div>
+            <h2 className="text-2xl md:text-5xl font-semibold mb-2 md:leading-[60px]">Contact Information</h2>
+            <p className="text-sm text-gray-300 mb-10">Say something to start a live chat!</p>
+
+            <ul className="space-y-4 text-sm">
+              <li className="flex items-center gap-3">
+                <Phone size={18} /> +91 98319 85565
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={18} /> subhambetal35@gmail.com
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={18} /> devsubham35@gmail.com
+              </li>
+              <li className="flex items-center gap-3">
+                <MapPin size={18} /> Kolkata, West Bengal, India
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-8 flex gap-4">
+            {/* Replace with your icons or socials */}
+            <a href="#" className="text-yellow-400 hover:text-yellow-500 transition"><i className="fab fa-twitter" /></a>
+            <a href="#" className="text-pink-400 hover:text-pink-500 transition"><i className="fab fa-instagram" /></a>
+            <a href="#" className="text-orange-400 hover:text-orange-500 transition"><i className="fab fa-discord" /></a>
+          </div>
         </div>
 
-        <Card className="mx-auto max-w-xl bg-white/50 dark:bg-gray-950 backdrop-blur-md shadow-xl border-none rounded-2xl">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-semibold">Send a Message</CardTitle>
-            <CardDescription>Fill in the form and we’ll get back to you shortly.</CardDescription>
-          </CardHeader>
+        {/* Contact Form */}
+        <div className="p-8">
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Contact Me</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            Any question or remarks? Just write us a message!
+          </p>
 
-          <CardContent>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <label className="flex items-center gap-3">
-                  <User className="text-muted-foreground" size={18} />
-                  <Input placeholder="Your Name" {...register("name")} />
-                </label>
-                {errors.name && <p className="text-sm text-red-500 mt-1 pl-7">{errors.name.message}</p>}
-              </div>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <div>
+              <Input placeholder="Full Name" {...register("name")} />
+              {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name.message}</p>}
+            </div>
 
-              <div>
-                <label className="flex items-center gap-3">
-                  <Mail className="text-muted-foreground" size={18} />
-                  <Input type="email" placeholder="Your Email" {...register("email")} />
-                </label>
-                {errors.email && <p className="text-sm text-red-500 mt-1 pl-7">{errors.email.message}</p>}
-              </div>
+            <div>
+              <Input type="email" placeholder="Email" {...register("email")} />
+              {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>}
+            </div>
 
-              <div>
-                <label className="flex items-start gap-3">
-                  <MessageSquare className="text-muted-foreground mt-2" size={18} />
-                  <Textarea placeholder="Your Message" {...register("message")} className="min-h-[120px]" />
-                </label>
-                {errors.message && <p className="text-sm text-red-500 mt-1 pl-7">{errors.message.message}</p>}
-              </div>
+            <div>
+              <Textarea placeholder="Write your message..." rows={5} {...register("message")} />
+              {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message.message}</p>}
+            </div>
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+            <Button type="submit" disabled={isSubmitting} className="w-full py-6 rounded-full cursor-pointer">
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </Button>
+          </form>
+        </div>
       </div>
 
       <WaveBackground />

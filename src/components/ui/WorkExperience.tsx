@@ -21,7 +21,7 @@ interface WorkExperienceTimelineProps {
 
 export default function WorkExperienceTimeline({ experiences }: WorkExperienceTimelineProps) {
     return (
-        <div className="max-w-5xl mx-auto py-12 px-4">
+        <div className="max-w-5xl mx-auto pb-8 px-4">
             <div className="flex flex-col justify-center items-center my-12 gap-5">
                 <motion.h2
                     className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60"
@@ -32,7 +32,7 @@ export default function WorkExperienceTimeline({ experiences }: WorkExperienceTi
                     Work Experiences
                 </motion.h2>
                 <motion.p
-                    className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+                    className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-center"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
@@ -55,7 +55,7 @@ export default function WorkExperienceTimeline({ experiences }: WorkExperienceTi
                     >
                         {/* Timeline dot */}
                         <motion.div
-                            className="absolute left-0 md:left-[48.9%] transform md:-translate-x-1/2 w-6 h-6 
+                            className="absolute left-[-10px] md:left-[48.9%] transform md:-translate-x-1/2 w-6 h-6 
                             rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 border-4 border-background shadow-lg z-10"
                             animate={{ scale: [1, 1.3, 1] }}
                             transition={{ repeat: Infinity, duration: 1.5 }}

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download, Link } from "lucide-react"
+import { ArrowRight, Download, Hammer, Link } from "lucide-react"
 
 const TypeWriter = ({ text, delay }: { text: string; delay: number }) => {
   const [currentText, setCurrentText] = useState("")
@@ -33,7 +33,7 @@ export default function Hero() {
           className="flex flex-col items-center text-center"
         >
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Hey 👋 I`&apos;m{" "}
+            Hey 👋 I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-400 via-teal-500 to-green-400 text-transparent bg-clip-text">
               Subham
             </span>
@@ -43,30 +43,41 @@ export default function Hero() {
               <TypeWriter text="Frontend Developer 💻" delay={100} />
             </span>
           </h2>
-          <p className="mt-6 max-w-3xl text-lg sm:text-xl text-muted-foreground">
+          <p className="mt-6 max-w-3xl text-md sm:text-xl text-muted-foreground">
             🚀 Crafting fast, scalable, and user-friendly web experiences with <strong>Next.js</strong> & <strong>React</strong>. 
             I`&apos;m passionate about building clean UIs that deliver ✨ delightful experiences and solve real-world problems.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-5">
+
+            <Button asChild size="lg" className="">
               <a href="#contact">
-                Let`&apos;s Talk <ArrowRight className="ml-2 h-5 w-5" />
+                Let&apos;s Talk <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="bg-blue-700 text-white">
-              <a href="#projects">My Work 🔨</a>
+
+
+            <Button size="lg" asChild className="bg-blue-700 text-white hover:bg-blue-800">
+              <a href="#projects">My Work <Hammer className="ml-2 h-5 w-5" /></a>
             </Button>
-            <Button size="lg">
-              <a href="/Subham_Betal_CV.pdf" download className="flex items-center gap-2">
+
+
+            <Button size="lg" asChild className=" bg-blue-700 text-white hover:bg-blue-800 xl:order-2">
+              <a href="/Subham_Betal_CV.pdf" download>
                 Resume <Download className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button size="lg" className="bg-blue-700 text-white">
-              <a href="www.linkedin.com/in/subham-betal-5b6a31266" className="flex items-center gap-2">
+
+
+            <Button size="lg" asChild>
+              <a href="www.linkedin.com/in/subham-betal-5b6a31266">
                 Linkedin <Link className="ml-2 h-5 w-5" />
               </a>
             </Button>
+
           </div>
+
+
         </motion.div>
       </div>
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>

@@ -11,7 +11,7 @@ export default function Projects() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="projects" className="container py-12 md:py-24 lg:py-32">
+    <section id="projects" className="container pb-12 md:pb-24 lg:pb-28">
       {/* Heading */}
       <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Projects</h2>
@@ -65,14 +65,14 @@ export default function Projects() {
 
       {/* Image Preview Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)} >
-        <DialogContent className="p-0 w-full rounded-2xl overflow-hidden">
+        <DialogContent className="p-0 w-[80%] xl:w-full rounded-2xl overflow-hidden !border-0 focus:outline-none">
           {selectedImage && (
             <Image
               src={selectedImage}
               alt="Project Preview"
               width={22000}
               height={22000}
-              className="w-full h-auto object-contain rounded"
+              className="w-full h-auto object-contain rounded border-0"
             />
           )}
         </DialogContent>
