@@ -66,7 +66,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="p-8">
+        <div className="px-8 pb-8 md:p-8">
           <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Contact Me</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
             Any question or remarks? Just write us a message!
