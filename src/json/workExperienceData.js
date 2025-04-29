@@ -5,7 +5,7 @@ export const experiences = [
       duration: "Sep 2024 – Present",
       location: "Kolkata, India",
       description: "Worked on diverse projects including crypto platforms, Web3 applications, and role-based e-commerce systems. Focused on API integration, scalable and maintainable UI development, and delivering pixel-perfect interfaces. Improved performance of web apps for enterprise clients.",
-      technologies: ["Next JS", "Typescript", "Zustand", "Material UI", "TanStack Query"],
+      technologies: ["Next JS", "Typescript", "Zustand", "Material UI", "Jira", "TanStack Query"],
     },
     {
       company: "Freelance",
