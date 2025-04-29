@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { WaveBackground } from "./WaveBackground"
 import { Textarea } from "@/components/ui/textarea"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { Mail, MapPin, Phone, User } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 
 const schema = yup.object().shape({
