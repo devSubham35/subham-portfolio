@@ -46,7 +46,7 @@ export default function Hero() {
           </h2>
           <p className="mt-6 max-w-3xl text-md sm:text-xl text-muted-foreground">
             🚀 Crafting fast, scalable, and user-friendly web experiences with <strong>Next.js</strong> & <strong>React</strong>. 
-            I`&apos;m passionate about building clean UIs that deliver ✨ delightful experiences and solve real-world problems.
+            I&apos;m passionate about building clean UIs that deliver ✨ delightful experiences and solve real-world problems.
           </p>
 
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-5">
