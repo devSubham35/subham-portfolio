@@ -46,7 +46,7 @@ export const projectsData = [
       "A responsive fully functional online teaching platform with its own currency coin for payments. Including Student portal, Teacher portal, Admin portal.",
     technologies: ["React", "Redux", "MUI", "REST API"],
     liveUrl: "https://tutr.app/",
-    previewImageUrl: "/images/tutr.png",
+    previewImageUrl: "/images/Tutr.png",
     isDisabled: false,
   },
   {
