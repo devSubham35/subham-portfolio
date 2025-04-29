@@ -106,7 +106,7 @@ export default function Skills() {
       </div>
 
       <motion.div
-        className="mx-auto grid gap-6 grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-5 mt-12"
+        className="mx-auto grid gap-3 md:gap-6 grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-5 mt-12"
         layout
       >
         <AnimatePresence mode="popLayout">
@@ -130,7 +130,7 @@ export default function Skills() {
             >
               <Card className="group overflow-hidden relative bg-gradient-to-br from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 border border-slate-200 dark:border-slate-800">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent group-hover:via-primary/10 transition-all duration-500 translate-x-[-100%] group-hover:translate-x-[100%]" />
-                <CardHeader className="p-4">
+                <CardHeader className="p-2.5 md:p-4">
                   <div className="flex items-center gap-4">
                     <motion.div
                       className={`w-12 h-12 rounded-xl bg-${skill.color}-50 dark:bg-${skill.color}-500/10 
@@ -150,7 +150,7 @@ export default function Skills() {
                     </motion.div>
                     <div className="flex-1">
                       <motion.h3
-                        className="text-sm font-medium mb-1"
+                        className="text-[14px] sm:text-sm font-medium mb-1"
                       >
                         {skill.name}
                       </motion.h3>

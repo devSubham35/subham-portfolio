@@ -30,6 +30,7 @@ export const projectsData = [
       "Ganesh Grains is a leading Indian food brand established in 1936, known for producing high-quality flour, sattu, and spices. With state-of-the-art manufacturing facilities and a strong distribution network, the company ensures premium food products for consumers across India.",
     technologies: [
       "Next.js",
+      "TypeScript",
       "TanStack Query",
       "Redux",
       "Material-UI",
@@ -44,7 +45,7 @@ export const projectsData = [
     title: "TUTR",
     description:
       "A responsive fully functional online teaching platform with its own currency coin for payments. Including Student portal, Teacher portal, Admin portal.",
-    technologies: ["React", "Redux", "MUI", "REST API"],
+    technologies: ["React", "TypeScript", "Redux", "MUI", "REST API"],
     liveUrl: "https://tutr.app/",
     previewImageUrl: "/images/Tutr.png",
     isDisabled: false,
@@ -62,7 +63,7 @@ export const projectsData = [
     title: "Privy",
     description:
       "We are built for growing creators' audiences. Privy is the #1 influencer reviews platform that lets users review their favourite digital creators.",
-    technologies: ["Next.js", "TanStack Query", "Redux", "MUI", "REST API"],
+    technologies: ["Next.js", "TypeScript", "TanStack Query", "Redux", "MUI", "REST API"],
     liveUrl: "https://privy.reviews/",
     previewImageUrl: "/images/Privy.png",
     isDisabled: false,
@@ -71,7 +72,7 @@ export const projectsData = [
     title: "Saturn",
     description:
       "Career Astrology helps you understand your strengths and what challenges you may face in your career. If you're feeling uncertain or are searching for answers, astrology can guide you and provide incredible insights into your career whether you're looking for a new role or starting a business.",
-    technologies: ["Next.js", "TanStack Query", "Redux", "MUI", "REST API"],
+    technologies: ["Next.js", "TypeScript", "TanStack Query", "Redux", "MUI", "REST API"],
     liveUrl: "https://yoursaturn.com/",
     previewImageUrl: "/images/Saturn.png",
     isDisabled: false,
