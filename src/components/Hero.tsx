@@ -1,5 +1,5 @@
 "use client"
-import HeroText from "./HeroText"
+import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download, Hammer, Link } from "lucide-react"
@@ -28,7 +28,13 @@ export default function Hero() {
     <section className="relative overflow-hidden py-20 sm:py-32 bg-grid-pattern">
       <div className="container relative z-10">
         <div className="flex flex-col items-center text-center" >
-         <HeroText />
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            Hey 👋 I&apos;m{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-teal-500 to-green-400 text-transparent bg-clip-text">
+              Subham
+            </span>
+          </h1>
+
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             <span className="bg-gradient-to-r from-blue-400 via-teal-500 to-green-400 text-transparent bg-clip-text">
               <TypeWriter text="Frontend Developer 💻" delay={100} />
