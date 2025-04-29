@@ -1,11 +1,11 @@
 "use client"
-import { motion } from "framer-motion"
+import HeroText from "./HeroText"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download, Hammer, Link } from "lucide-react"
 
 const TypeWriter = ({ text, delay }: { text: string; delay: number }) => {
-  
+
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -27,25 +27,15 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden py-20 sm:py-32 bg-grid-pattern">
       <div className="container relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center"
-        >
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Hey 👋 I&apos;m{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-teal-500 to-green-400 text-transparent bg-clip-text">
-              Subham
-            </span>
-          </h1>
+        <div className="flex flex-col items-center text-center" >
+         <HeroText />
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             <span className="bg-gradient-to-r from-blue-400 via-teal-500 to-green-400 text-transparent bg-clip-text">
               <TypeWriter text="Frontend Developer 💻" delay={100} />
             </span>
           </h2>
           <p className="mt-6 max-w-3xl text-md sm:text-xl text-muted-foreground">
-            🚀 Crafting fast, scalable, and user-friendly web experiences with <strong>Next.js</strong> & <strong>React</strong>. 
+            🚀 Crafting fast, scalable, and user-friendly web experiences with <strong>Next.js</strong> & <strong>React</strong>.
             I&apos;m passionate about building clean UIs that deliver ✨ delightful experiences and solve real-world problems.
           </p>
 
@@ -79,7 +69,7 @@ export default function Hero() {
           </div>
 
 
-        </motion.div>
+        </div>
       </div>
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </section>
