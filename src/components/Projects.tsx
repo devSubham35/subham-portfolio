@@ -33,7 +33,7 @@ export default function Projects() {
                 alt={project.title}
                 width={500}
                 height={500}
-                className="object-cover rounded-md mb-2 cursor-pointer"
+                className="object-contain md:object-cover rounded-md mb-2 cursor-pointer"
                 onClick={() => setSelectedImage(project.previewImageUrl)}
               />
               <CardTitle>{project.title}</CardTitle>
@@ -68,7 +68,7 @@ export default function Projects() {
 
       {/* Image Preview Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)} >
-        <DialogContent className="p-0 w-[80%] xl:w-full rounded-2xl overflow-hidden !border-0 focus:outline-none">
+        <DialogContent className="p-0 w-[90%] xl:w-full rounded-lg overflow-hidden !border-0 focus:outline-none">
           {selectedImage && (
             <Image
               src={selectedImage}
