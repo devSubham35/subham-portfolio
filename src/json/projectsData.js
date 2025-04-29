@@ -92,6 +92,45 @@ export const projectsData = [
     liveUrl: "https://ecme-react.themenate.net/sign-in",
     previewImageUrl: "/images/ECME.png",
     isDisabled: true
-  }
-  
+  },
+  {
+    title: "Jobreef",
+    description: "Developed a role-based job-finding platform that connects job seekers with relevant opportunities. Implemented a customizable admin dashboard for managing listings, users, and analytics, ensuring a streamlined experience for recruiters and applicants alike.",
+    technologies: ["React JS", "TypeScript", "Redux", "Tailwind CSS"],
+    liveUrl: "https://www.jobreef.net/",
+    previewImageUrl: "/images/Jobreef.png",
+    isDisabled: false
+  },
+  {
+    title: "Dermavidya",
+    description: "Built a dermatology-focused consulting platform enabling users to book consultations, access dermatology eBooks, join live conferences with top doctors, and collaborate with professionals. Designed a role-based interface for doctors, patients, and admins to ensure smooth navigation and functionality.",
+    technologies: ["Next JS", "Redux", "Tailwind CSS", "ShadCn"],
+    liveUrl: "https://www.dermavidya.com/",
+    previewImageUrl: "/images/Dermavidya.png",
+    isDisabled: false
+  },  
+  {
+    title: "Rudralife",
+    description: "Developed a full-fledged eCommerce platform specializing in authentic Rudraksha products. Implemented dynamic product listings, secure checkout, and an intuitive admin dashboard for order and inventory management, ensuring a smooth user experience for both customers and administrators.",
+    technologies: ["Next JS", "TypeScript", "Redux", "Tailwind CSS"],
+    liveUrl: "https://rudralife.com/",
+    previewImageUrl: "/images/Rudralife.png",
+    isDisabled: false
+  },
+  {
+    title: "Solar Nets",
+    description: "Built a specialized eCommerce platform for selling customizable solar top cover nets designed to protect solar panels from golf ball damage and harsh weather. Implemented a user-friendly interface with product customization options, seamless checkout, and admin tools for managing orders and inventory.",
+    technologies: ["Next JS", "React", "Redux", "Tailwind CSS", "ShadCn"],
+    liveUrl: "https://solarnets.com/",
+    previewImageUrl: "/images/Solarnets.png",
+    isDisabled: false
+  },  
+  {
+    title: "Solar Nets",
+    description: "Integrated Editor.js into a dynamic customization module, allowing users to design and personalize solar protection nets for their panels. This feature empowers users to input dimensions, add notes, and generate quotes through an interactive, editor-driven interface.",
+    technologies: ["Next JS", "React", "Redux", "Material UI"],
+    liveUrl: "https://editor.solarnets.com/quote/editor",
+    previewImageUrl: "/images/Solarnets-Editor.png",
+    isDisabled: false
+  }  
 ];
