@@ -71,7 +71,7 @@ export default function Hero() {
 
 
             <Button size="lg" asChild>
-              <a href="www.linkedin.com/in/subham-betal-5b6a31266">
+              <a href="https://www.linkedin.com/in/subham-betal-5b6a31266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                 Linkedin <Link className="ml-2 h-5 w-5" />
               </a>
             </Button>
