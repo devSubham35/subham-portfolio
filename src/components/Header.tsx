@@ -1,14 +1,15 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false)
+
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
 

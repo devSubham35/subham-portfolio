@@ -1,20 +1,15 @@
 "use client"
 
-import { useForm } from "react-hook-form"
 import * as yup from "yup"
-import { yupResolver } from "@hookform/resolvers/yup"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Mail, MapPin, MessageSquare, Phone, User } from "lucide-react"
-import { WaveBackground } from "./WaveBackground"
 import { toast } from "sonner"
+import { useForm } from "react-hook-form"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { WaveBackground } from "./WaveBackground"
+import { Textarea } from "@/components/ui/textarea"
+import { yupResolver } from "@hookform/resolvers/yup"
+import { Mail, MapPin, Phone, User } from "lucide-react"
 
-interface ContactProps {
-  heading?: string
-  description?: string
-}
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -24,16 +19,9 @@ const schema = yup.object().shape({
 
 type FormData = yup.InferType<typeof schema>
 
-export default function Contact({
-  heading = "Get in Touch",
-  description = "Have a question or want to work together? Feel free to reach out!",
-}: ContactProps) {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<FormData>({
+export default function Contact() {
+
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: yupResolver(schema),
   })
 

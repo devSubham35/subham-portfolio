@@ -84,5 +84,14 @@ export const projectsData = [
     liveUrl: "#",
     previewImageUrl: "/images/Vrbar.png",
     isDisabled: true
+  },
+  {
+    title: "ECME Template Integration",
+    description: "Implemented and customized a robust admin dashboard using ECME a modern template, enabling seamless access to marketing, analytics, and AI tools. The integration ensures an efficient, scalable interface tailored for business operations.",
+    technologies: ["React JS", "TypeScript", "Redux", "Tailwind CSS"],
+    liveUrl: "https://ecme-react.themenate.net/sign-in",
+    previewImageUrl: "/images/ECME.png",
+    isDisabled: true
   }
+  
 ];

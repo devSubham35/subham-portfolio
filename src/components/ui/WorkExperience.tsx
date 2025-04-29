@@ -1,25 +1,12 @@
 "use client"
-
 import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Calendar, Briefcase } from "lucide-react"
+import { experiences } from "../../json/workExperienceData"
 
-// Types
-interface Experience {
-    company: string
-    role: string
-    duration: string
-    location: string
-    description: string
-    technologies: string[]
-}
 
-interface WorkExperienceTimelineProps {
-    experiences: Experience[]
-}
-
-export default function WorkExperienceTimeline({ experiences }: WorkExperienceTimelineProps) {
+export default function WorkExperienceTimeline() {
     return (
         <div className="max-w-5xl mx-auto pb-8 px-4">
             <div className="flex flex-col justify-center items-center my-12 gap-5">

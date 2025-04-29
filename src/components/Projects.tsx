@@ -1,13 +1,16 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+import Image from "next/image";
+import { useState } from "react";
+import { Globe } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Globe } from "lucide-react"
-import Image from "next/image";
 import { projectsData } from "../json/projectsData"
-import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Projects() {
+  
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (

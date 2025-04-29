@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Download, Hammer, Link } from "lucide-react"
 
 const TypeWriter = ({ text, delay }: { text: string; delay: number }) => {
+  
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
 

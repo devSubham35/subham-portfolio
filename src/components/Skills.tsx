@@ -1,7 +1,10 @@
+"use client"
+
+import { useTheme } from 'next-themes';
 import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
   HTML5, CSS3, JavaScript, React as ReactIcon, NextJs, TypeScript, GitHubLight,
   GitLab, Git, Figma, NodeJs, Hashnode, ExpressJsDark, MongoDB, Jira,
@@ -9,7 +12,6 @@ import {
   MaterialUI, Linux, Notion, GraphQL,
   Postman, GitHubDark, ExpressJsLight
 } from "developer-icons";
-import { useTheme } from 'next-themes';
 
 
 const categories = ["All", "Frontend", "Backend", "Tools", "Design"];
@@ -18,8 +20,6 @@ export default function Skills() {
 
   const { theme } = useTheme()
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  console.log(theme, "++66")
 
   const skills = [
     { name: "HTML5", icon: <HTML5 size={30} />, color: "orange", category: "Frontend" },
