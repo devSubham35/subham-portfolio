@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">
-            <span className="hidden font-bold sm:inline-block">YourName</span>
+            <span className="hidden font-bold sm:inline-block">Subham Betal</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <a className="transition-colors hover:text-foreground/80 text-foreground/60" href="#skills">

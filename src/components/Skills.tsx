@@ -6,7 +6,7 @@ import {
   HTML5, CSS3, JavaScript, React as ReactIcon, NextJs, TypeScript, GitHubLight,
   GitLab, Git, Figma, NodeJs, Hashnode, ExpressJsDark, MongoDB, Jira,
   VisualStudioCode, Appwrite, TailwindCSS, Bootstrap5, ReactQuery, Redux,
-  MaterialUI, Linux, Slack, Notion, GraphQL,
+  MaterialUI, Linux, Notion, GraphQL,
   Postman
 } from "developer-icons";
 
@@ -16,7 +16,7 @@ const skills = [
   { name: "JavaScript", icon: <JavaScript size={30} />, color: "yellow", category: "Frontend" },
   { name: "React", icon: <ReactIcon size={30} />, color: "cyan", category: "Frontend" },
   { name: "Next.js", icon: <NextJs size={30} />, color: "slate", category: "Frontend" },
-  { name: "TypeScript", icon: <TypeScript size={30} />, color: "blue", category: "Languages" },
+  { name: "TypeScript", icon: <TypeScript size={30} />, color: "blue", category: "Frontend" },
   { name: "GitHub", icon: <GitHubLight size={30} />, color: "slate", category: "Tools" },
   { name: "GitLab", icon: <GitLab size={30} />, color: "orange", category: "Tools" },
   { name: "Git", icon: <Git size={30} />, color: "red", category: "Tools" },
@@ -34,7 +34,6 @@ const skills = [
   { name: "Redux", icon: <Redux size={30} />, color: "purple", category: "Frontend" },
   { name: "Material UI", icon: <MaterialUI size={30} />, color: "blue", category: "Design" },
   { name: "Linux", icon: <Linux size={30} />, color: "yellow", category: "Tools" },
-  { name: "Slack", icon: <Slack size={30} />, color: "red", category: "Tools" },
   { name: "Notion", icon: <Notion size={30} />, color: "slate", category: "Tools" },
   { name: "GraphQL", icon: <GraphQL size={30} />, color: "pink", category: "Frontend" },
   { name: "Postman", icon: <Postman size={30} />, color: "orange", category: "Tools" },
@@ -92,7 +91,7 @@ export default function Skills() {
       </div>
 
       <motion.div
-        className="mx-auto grid gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-5 mt-12"
+        className="mx-auto grid gap-6 grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:grid-cols-5 mt-12"
         layout
       >
         <AnimatePresence mode="popLayout">
@@ -119,7 +118,8 @@ export default function Skills() {
                 <CardHeader className="p-4">
                   <div className="flex items-center gap-4">
                     <motion.div 
-                      className={`w-12 h-12 rounded-xl bg-${skill.color}-50 dark:bg-${skill.color}-500/10 flex items-center justify-center relative`}
+                      className={`w-12 h-12 rounded-xl bg-${skill.color}-50 dark:bg-${skill.color}-500/10 
+                        flex items-center justify-center relative`}
                       whileHover={{
                         rotate: 360,
                         transition: { duration: 0.8, ease: "easeInOut" }
