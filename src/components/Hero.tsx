@@ -1,5 +1,4 @@
 "use client"
-import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download, Hammer, Link } from "lucide-react"
@@ -60,16 +59,16 @@ export default function Hero() {
 
 
             <Button size="lg" asChild className=" bg-blue-700 text-white hover:bg-blue-800 xl:order-2">
-              <a href="/Subham_Betal_CV.pdf" download>
+              {/* <a href="/Subham_Betal_CV.pdf" download> */}
                 Resume <Download className="ml-2 h-5 w-5" />
-              </a>
+              {/* </a> */}
             </Button>
 
 
             <Button size="lg" asChild>
-              <a href="https://www.linkedin.com/in/subham-betal-5b6a31266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              {/* <a href="https://www.linkedin.com/in/subham-betal-5b6a31266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> */}
                 Linkedin <Link className="ml-2 h-5 w-5" />
-              </a>
+              {/* </a> */}
             </Button>
 
           </div>
