@@ -44,12 +44,9 @@ export default function Contact() {
             <ul className="space-y-4 text-sm">
               {/* <li className="flex items-center gap-3">
                 <Phone size={18} /> +91 98319 85565
-<<<<<<< HEAD
-=======
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} /> subhambetal35@gmail.com
->>>>>>> 5b0df72a70959767ff351b3990a4edf97a3ca5c3
               </li> */}
               <li className="flex items-center gap-3">
                 <Mail size={18} /> devsubham35@gmail.com
