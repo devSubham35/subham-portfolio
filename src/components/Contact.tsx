@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { WaveBackground } from "./WaveBackground"
 import { Textarea } from "@/components/ui/textarea"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 
 
 const schema = yup.object().shape({
@@ -42,12 +42,9 @@ export default function Contact() {
             <p className="text-sm text-gray-300 mb-10">Say something to start a live chat!</p>
 
             <ul className="space-y-4 text-sm">
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <Phone size={18} /> +91 98319 85565
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} /> subhambetal35@gmail.com
-              </li>
+              </li> */}
               <li className="flex items-center gap-3">
                 <Mail size={18} /> devsubham35@gmail.com
               </li>
