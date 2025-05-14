@@ -1,11 +1,11 @@
 'use client'
-// import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 import Header from "@/components/Header";
-// import Skills from "@/components/Skills";
-// import Contact from "@/components/Contact";
-// import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
 import { ThemeProvider } from "@/components/ThemeProvider";
-// import WorkExperienceTimeline from "@/components/ui/WorkExperience";
+import WorkExperienceTimeline from "@/components/ui/WorkExperience";
 
 export default function Home() {
   return (
@@ -13,11 +13,11 @@ export default function Home() {
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         <main>
-          {/* <Hero />
+          <Hero />
           <Skills />
           <Projects />
           <WorkExperienceTimeline/>
-          <Contact /> */}
+          <Contact />
         </main>
       </div>
     </ThemeProvider>
